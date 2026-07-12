@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 from utils.database import get_connection, initialize_database
 
 app = Flask(__name__)
@@ -11,14 +11,48 @@ initialize_database()
 # ===========================
 
 @app.route("/")
-def user_home():
+def home():
+    return render_template("home.html")
+
+@app.route("/user")
+def user():
     return render_template("user.html")
+
+@app.route("/login", methods=["GET"])
+def login():
+
+    return render_template("login.html")
+
+
+
+@app.route("/login", methods=["POST"])
+def login_post():
+
+    username = request.form.get("username", "").strip()
+
+    password = request.form.get("password", "").strip()
+
+    if username == "admin" and password == "Admin@2026":
+
+        return redirect(url_for("admin_home"))
+
+    return render_template(
+
+        "login.html",
+
+        error="Invalid username or password. Please try again."
+
+    )
 
 
 @app.route("/admin")
 def admin_home():
     return render_template("admin.html")
 
+@app.route("/logout")
+def logout():
+
+    return redirect("/")
 
 # ===========================
 # GET ALL PRODUCTS
@@ -96,7 +130,7 @@ def add_product():
         INSERT INTO products
         (name,category,price,quantity)
 
-        VALUES(?,?,?,?,?)
+        VALUES(?,?,?,?)
         """,
         (name, category, price, quantity)
     )

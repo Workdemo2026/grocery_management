@@ -767,3 +767,375 @@ button:hover{
     transform:translateY(-6px);
 
 }
+
+/* ==========================================
+   HOME PAGE (Landing Page)
+========================================== */
+
+.hero{
+
+    min-height:75vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#4CAF50,#81C784);
+
+    color:white;
+
+    padding:50px 20px;
+
+}
+
+.hero-content{
+
+    max-width:800px;
+
+}
+
+.hero h1{
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+    color:white;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+    text-decoration:none;
+
+    padding:14px 30px;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    background:white;
+
+    color:#2E7D32;
+
+}
+
+.btn-primary:hover{
+
+    background:#F1F8E9;
+
+}
+
+.btn-secondary{
+
+    background:#2E7D32;
+
+    color:white;
+
+}
+
+.btn-secondary:hover{
+
+    background:#1B5E20;
+
+}
+
+
+
+/* ==========================================
+   FEATURE SECTION
+========================================== */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+    padding:50px;
+
+    background:#F8F9FA;
+
+}
+
+.feature-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.feature-card h2{
+
+    color:#2E7D32;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* ==========================================
+   LOGIN PAGE
+========================================== */
+
+.login-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:80vh;
+
+    background:#F4F6F8;
+
+    padding:30px;
+
+}
+
+.login-card{
+
+    width:420px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.login-card h1{
+
+    text-align:center;
+
+    color:#2E7D32;
+
+    margin-bottom:10px;
+
+}
+
+.login-card p{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+.login-card label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+}
+
+.login-card input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #CCC;
+
+    border-radius:8px;
+
+    margin-bottom:15px;
+
+}
+
+.login-card button{
+
+    width:100%;
+
+    background:#2E7D32;
+
+    padding:14px;
+
+    margin-top:10px;
+
+    font-size:16px;
+
+}
+
+.login-card button:hover{
+
+    background:#1B5E20;
+
+}
+
+.error-message{
+
+    background:#FFEBEE;
+
+    color:#C62828;
+
+    border:1px solid #EF9A9A;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+.back-home{
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+.back-home a{
+
+    text-decoration:none;
+
+    color:#2E7D32;
+
+    font-weight:bold;
+
+}
+
+.back-home a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .hero h1{
+
+        font-size:32px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .login-card{
+
+        width:100%;
+
+    }
+
+    .features{
+
+        padding:20px;
+
+    }
+
+}
+.demo-login{
+
+    margin-top:25px;
+
+    padding:15px;
+
+    background:#F1F8E9;
+
+    border-left:5px solid #2E7D32;
+
+    border-radius:8px;
+
+}
+
+.demo-login h4{
+
+    margin-bottom:10px;
+
+    color:#2E7D32;
+
+}
+
+.demo-login p{
+
+    margin:5px 0;
+
+    color:#333;
+
+    text-align:left;
+
+}
