@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FreshMart Grocery Store</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        FreshMart Grocery
+
+    </div>
+
+    <nav>
+
+        <a href="/">Home</a>
+
+        <a href="/admin">Admin</a>
+
+    </nav>
+
+</header>
+
+<div class="container">
+
+    <h1>Fresh Grocery Store</h1>
+
+    <!-- Search -->
+
+    <div class="card">
+
+        <input
+
+            type="text"
+
+            id="search"
+
+            placeholder="Search Products">
+
+    </div>
+
+    <!-- Category -->
+
+    <div class="card">
+
+        <select id="categoryFilter">
+
+            <option value="">All Categories</option>
+
+            <option>Dairy</option>
+
+            <option>Vegetables</option>
+
+            <option>Fruits</option>
+
+            <option>Bakery</option>
+
+            <option>Snacks</option>
+
+            <option>Beverages</option>
+
+            <option>Rice</option>
+
+            <option>Oil</option>
+
+        </select>
+
+    </div>
+
+    <!-- Product Grid -->
+
+    <div
+
+        id="productContainer"
+
+        class="product-grid">
+
+    </div>
+
+</div>
+
+<!-- Cart -->
+
+<div class="cart">
+
+    <h2>
+
+        Shopping Cart
+
+    </h2>
+
+    <div id="cartItems">
+
+    </div>
+
+    <hr>
+
+    <h3>
+
+        Total :
+        $<span id="cartTotal">0</span>
+
+    </h3>
+
+    <button id="checkoutBtn">
+
+        Checkout
+
+    </button>
+
+</div>
+
+<script src="{{ url_for('static', filename='user.js') }}"></script>
+
+</body>
+
+</html>
