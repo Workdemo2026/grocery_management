@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FreshMart Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        FreshMart Admin
+
+    </div>
+
+    <nav>
+
+        <a href="/admin">Dashboard</a>
+
+        <a href="/">User Store</a>
+
+    </nav>
+
+</header>
+
+<div class="container">
+
+    <h1>Admin Dashboard</h1>
+
+    <!-- Dashboard Cards -->
+
+    <div class="dashboard">
+
+        <div class="card summary-card">
+
+            <h3>Total Products</h3>
+
+            <h2 id="totalProducts">0</h2>
+
+        </div>
+
+        <div class="card summary-card">
+
+            <h3>Total Inventory Value</h3>
+
+            <h2 id="inventoryValue">$0</h2>
+
+        </div>
+
+        <div class="card summary-card">
+
+            <h3>Low Stock</h3>
+
+            <h2 id="lowStock">0</h2>
+
+        </div>
+
+    </div>
+
+    <!-- Product Form -->
+
+    <div class="card">
+
+        <h2>Add / Update Product</h2>
+
+        <input
+            type="hidden"
+            id="productId">
+
+        <div class="form-grid">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Product Name">
+
+            <select id="category">
+
+                <option value="">Select Category</option>
+
+                <option>Dairy</option>
+
+                <option>Vegetables</option>
+
+                <option>Fruits</option>
+
+                <option>Bakery</option>
+
+                <option>Snacks</option>
+
+                <option>Beverages</option>
+
+                <option>Rice</option>
+
+                <option>Oil</option>
+
+            </select>
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Price">
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity">
+
+        </div>
+
+        <button id="saveBtn">
+
+            Save Product
+
+        </button>
+
+        <button
+            type="button"
+            id="clearBtn">
+
+            Clear
+
+        </button>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="card">
+
+        <h2>Search Product</h2>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search by Product Name or Category">
+
+    </div>
+
+    <!-- Product Table -->
+
+    <div class="card">
+
+        <h2>Inventory</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Category</th>
+
+                <th>Price</th>
+
+                <th>Quantity</th>
+
+                <th>Status</th>
+
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="productTable">
+                            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <p>
+
+        © 2026 FreshMart Grocery Management System
+
+    </p>
+
+</footer>
+
+<script src="{{ url_for('static', filename='admin.js') }}"></script>
+
+</body>
+
+</html>
