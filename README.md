@@ -338,3 +338,6 @@ Resolved merge conflicts and synchronized the final project.
 Reference:
 
 Git Documentation: https://git-scm.com/docs
+
+
+https://grocery-management-408306425044.europe-west1.run.app/
